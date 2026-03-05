@@ -1,0 +1,161 @@
+📁 ESTRUCTURA DEL PROYECTO CONTADOR
+═══════════════════════════════════════════════════════════════════
+
+Contador/
+│
+├── 📄 app.py                    ⭐ Servidor Flask (Lógica principal)
+├── 📄 requirements.txt          ✓ Dependencias Python
+├── 📄 .gitignore               ✓ Archivos a ignorar en git
+│
+├── 📁 templates/
+│   └── 📄 index.html           ⭐ Interfaz web (Tailwind CSS)
+│
+├── 📁 uploads/                 ✓ Carpeta temporal (se crea automáticamente)
+│
+├── 📄 venv/                    ✓ Entorno virtual (creado con python -m venv)
+│   ├── Scripts/
+│   │   ├── activate.bat        ✓ Activar venv (CMD)
+│   │   ├── Activate.ps1        ✓ Activar venv (PowerShell)
+│   │   └── python.exe          ✓ Python en el venv
+│   └── Lib/
+│       └── site-packages/      ✓ Paquetes instalados
+│
+├── 📄 ejemplo_rol.txt          ✓ Archivo de prueba
+│
+├── 📄 run.bat                  ✓ Script para iniciar (CMD)
+├── 📄 run.ps1                  ✓ Script para iniciar (PowerShell)
+│
+├── 📄 test_stats.py            ✓ Script de prueba de lógica
+│
+├── 📄 README.md                ✓ Documentación completa
+├── 📄 QUICK_START.md           ✓ Guía rápida
+└── 📄 ESTRUCTURA.txt           ✓ Este archivo
+
+═══════════════════════════════════════════════════════════════════
+
+📌 ARCHIVOS PRINCIPALES:
+
+1️⃣  app.py
+    - Servidor Flask principal
+    - Endpoint /api/audit para procesar archivos
+    - Lógica de limpieza BBCode/HTML
+    - Cálculo de stats, líneas y caracteres
+    - Soporte .txt y .docx
+
+2️⃣  templates/index.html
+    - Interfaz moderna con Tailwind CSS
+    - Diseño oscuro (slate-900) con detalles naranja
+    - Upload drag-and-drop
+    - Visualización de resultados en tiempo real
+    - Barra de progreso interactiva
+
+3️⃣  requirements.txt
+    - Flask 3.0.0
+    - python-docx 0.8.11
+    - Werkzeug 3.0.1
+
+═══════════════════════════════════════════════════════════════════
+
+🚀 CÓMO USAR:
+
+OPCIÓN 1 - Doble clic (Más fácil):
+   → Haz doble clic en "run.bat"
+   → Se abrirá la consola y el servidor estará listo
+
+OPCIÓN 2 - PowerShell:
+   → Abre PowerShell en la carpeta del proyecto
+   → Ejecuta: .\run.ps1
+   → Se activará venv automáticamente
+
+OPCIÓN 3 - Manual:
+   → Abre PowerShell en la carpeta del proyecto
+   → Ejecuta: .\venv\Scripts\Activate.ps1
+   → Luego: python app.py
+
+═══════════════════════════════════════════════════════════════════
+
+📊 CARACTERÍSTICAS PRINCIPALES:
+
+✅ LIMPIEZA DE TEXTO:
+   • Etiquetas BBCode: [b], [i], [color], [center], [quote], etc.
+   • Etiquetas HTML: <div>, <span>, <p>, etc.
+   • Espacios múltiples normalizados
+   • Solo texto plano
+
+✅ CÁLCULO DE ESTADÍSTICAS:
+   • Caracteres: Conteo total
+   • Líneas: Caracteres ÷ 100
+   • Stats: Progresión cíclica (80, 120, 150 líneas)
+   • Líneas faltantes: Para próximo stat
+
+✅ SOPORTE DE ARCHIVOS:
+   • .txt: Archivos de texto plano
+   • .docx: Documentos Word moderno
+   • Máximo: 16MB
+
+✅ INTERFAZ:
+   • Tailwind CSS (CDN)
+   • Diseño responsive
+   • Colores: Slate-900 + Naranja
+   • Animaciones suaves
+   • Loading spinner
+
+═══════════════════════════════════════════════════════════════════
+
+🧪 PRUEBAS:
+
+Para probar la lógica de stats:
+   python test_stats.py
+
+Para probar con archivo:
+   1. Carga "ejemplo_rol.txt" en la interfaz
+   2. Observa los resultados calculados
+
+═══════════════════════════════════════════════════════════════════
+
+📈 TABLA DE PROGRESIÓN DE STATS:
+
+Líneas | Stats | Líneas Acumuladas | Próximo
+-------|-------|-------------------|--------
+   80  |   1   |        80          |   200
+  200  |   2   |       200          |   350
+  350  |   3   |       350          |   430
+  430  |   4   |       430          |   550
+  550  |   5   |       550          |   700
+  700  |   6   |       700          |   780
+  780  |   7   |       780          |   900
+  900  |   8   |       900          |  1080
+
+═══════════════════════════════════════════════════════════════════
+
+🔧 TROUBLESHOOTING:
+
+❌ "No se puede cargar activate.ps1" (PowerShell)
+   → Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+❌ "Port 5000 already in use"
+   → Edita app.py, línea final: port=5001
+
+❌ "No module named flask"
+   → pip install flask
+
+❌ "Error con archivos .docx"
+   → pip install python-docx
+
+═══════════════════════════════════════════════════════════════════
+
+💡 TIPS:
+
+• Arrastra archivos directamente a la interfaz
+• Usa Ctrl+C en la consola para detener el servidor
+• La interfaz se abre en http://127.0.0.1:5000
+• Los archivos se limpian automáticamente después de procesar
+• Máximo 16MB por archivo
+
+═══════════════════════════════════════════════════════════════════
+
+✨ ¡Proyecto completado y listo para usar! ✨
+
+Creado: Marzo 2026
+Versión: 1.0
+Licencia: MIT

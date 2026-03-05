@@ -1,0 +1,33 @@
+Ejemplo de Texto con BBCode y HTML
+
+[b]Titulo en Negrita[/b]
+
+Este es un [color=red]texto con color rojo[/color] y aquí va [i]itálica[/i].
+
+Párrafo normal con <span style="color: blue;">HTML inline</span> mezclado.
+
+[center]Texto centrado con BBCode[/center]
+
+Más contenido de rol: El personaje caminaba por las calles oscuras de la ciudad. 
+Sus pasos resonaban en el pavimento mojado. La noche era profunda y llena de misterio.
+
+[quote="NPC"]Esto es una cita de un NPC[/quote]
+
+<div class="container">
+El HTML también se limpia automáticamente
+</div>
+
+Continuamos con el texto del rol. El personaje observaba todo con cuidado. 
+Las sombras se movían alrededor. Cada sonido parecía una amenaza potencial.
+
+[b][color=orange]Diálogo importante[/color][/b]
+
+"¿Quién eres?" preguntó el guardia, desenvainando su espada. 
+El protagonista levantó las manos en señal de paz. 
+"Soy solo un viajero," respondió con voz firme.
+
+Más descripción de la escena: El lugar era antiguo, cubierto de polvo y telarañas. 
+Las paredes mostraban signos de haber sido habitadas hace mucho tiempo. 
+Los ecos de pasos lejanos resonaban en los corredores oscuros.
+
+[i]El fin del fragmento de rol[/i]
